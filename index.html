@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TQ`s website</title>
+
+        <link href="src/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="src/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="src/css/custom.css" rel="stylesheet">
+        <link href="src/css/cbp-menu.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="row-fluid">
+                <div class="text-center span1 offset2" id="navigation"><a>Navigation</a></div>
+                <div class="text-center span1 menu_master">
+                    <a class="">AboutMe</a>
+                </div>
+            </nav>
+        </header>
+        <section id="intro">
+            <div class="row-fluid">
+                <div class="span10 text-right" id="intro_title">Stay hungry, Stay foolish</div>
+            </div>
+            
+        </section>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left " id="cbp-menu">
+            <h3>Navigation</h3>
+            <a href="#">Blog</a>
+            <a href="#">Django</a>
+            <a href="../SHBook">SHBook</a>
+        </nav>  
+        <footer>
+            <div class="row-fluid"></div>
+        </footer>
+    </body>
+</html>
+
+<script src="src/js/jquery-1.9.1.min.js"></script>
+<script src="src/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        //aync load the big image
+        $('#intro').css('background-image', 'url(wallpapers/intro.jpg)');
+        //navigation inactive and click function
+        $('header div').addClass('inactive')
+        $('body').addClass('cbp-spmenu-push');
+        $('#navigation').click(function () {
+            $('#cbp-menu').toggleClass('cbp-spmenu-open');
+            $('body').toggleClass('cbp-spmenu-push-toright');
+            $('header div').toggleClass('inactive').toggleClass('disabled');
+            $(this).removeClass('disabled').toggleClass('active');
+        });
+    });
+</script>
