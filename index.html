@@ -44,13 +44,13 @@
 <script type="text/javascript">
     $(document).ready(function () {
         //aync load the big image
-        $('#intro').css('background-image', 'url(wallpapers/intro.png)');
+        $('#intro').css('background-image', 'url(wallpapers/intro.jpg)');
         //navigation inactive and click function
         $('header div').addClass('inactive')
-        $('body').addClass('cbp-spmenu-push');
+        $('header').addClass('cbp-spmenu-push');
         $('#navigation').click(function () {
             $('#cbp-menu').toggleClass('cbp-spmenu-open');
-            $('body').toggleClass('cbp-spmenu-push-toright');
+            $('header').toggleClass('cbp-spmenu-push-toright');
             $('header div').toggleClass('inactive').toggleClass('disabled');
             $(this).removeClass('disabled').toggleClass('active');
         });
