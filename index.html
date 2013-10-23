@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TQ`s website</title>
 
+
         <link href="src/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="src/css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="src/css/font-awesome.min.css" rel="stylesheet">
@@ -16,53 +17,29 @@
         <header>
             <nav class="row-fluid">
                 <div class="text-center span1 offset2" id="navigation"><a>Navigation</a></div>
-                <div class="text-center span1 menu_master" id="aboutme"><a class="">AboutMe</a></div>
             </nav>
         </header>
         <section id="intro">
             <div class="row-fluid">
                 <div class="span10 text-right" id="intro_title">Stay hungry, Stay foolish</div>
             </div>
-            
         </section>
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left " id="cbp-menu">
-            <h3>Navigation</h3>
+            <h3>Navigation</h3>
             <a href="../WordPress">Blog</a>
             <a href="#">Django</a>
             <a href="../SHBook">SHBook</a>
-        </nav>  
-        <footer>
-            <div class="row-fluid margin_no">
-                <div class="span8 offset2">
-                    <div class="row-fluid">
-                        <div class="span1 text-right"><img src="src/img/dongyueweb.png" alt="logo" id="footer_company_logo"></div>
-                        <div class="span5" id="footer_company">
-                            <div class="row-fluid"><h3 class="margin_no">Belong To: DongYueWeb</h3></div>
-                            <div class="row-fluid"><h5 class="margin_no"><a href="http://www.dongyueweb.com">http://www.dongyueweb.com</a></h5></div>
-                        </div>
-                        <div class="span2 offset4" id="footer_name">
-                            <div class="row-fluid text-right"><h2 class="margin_no">Tq 5124</h2></div>
-                            <div class="row-fluid text-right"><h4 class="margin_no">Web Developer</h4></div>
-                        </div>
-                    </div>
-                    <div class="row-fluid" id="footer_contact">
-                        <div class="span4 text-right"><i class="icon-globe"></i>&nbsp;Shanghai JiaoTong University, China</div>
-                        <div class="span4 text-right"><i class="icon-envelope">&nbsp;tq5124.web@gmail.com</i></div>
-                        <div class="span2 text-right">
-                            <a href="http://www.renren.com/305022959/profile">
-                                <i class="renren"></i>&nbsp;renren/wutianqi
-                            </a>
-                        </div>
-                        <div class="span2 text-right">
-                            <a href="https://github.com/tq5124">
-                                <i class="icon-github"></i>&nbsp;Github/tq5124
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </footer>
+            <h3>About Me</h3>
+            <a href="#">
+                <p style="font-size: 2em;font-weight: bold;">tq5124</p>
+                <p>Web developer, Belong to DongYueWeb @SJTU</p>
+            </a>
+            <h3>Contact</h3>
+            <a href="http://www.renren.com/305022959" target="_blank"><i class="renren"></i>&nbsp;&nbsp;RenRen</a>
+            <a href="https://github.com/tq5124" target="_blank"><i class="icon-github"></i>&nbsp;&nbsp;Github</a>
+            <a href="https://twitter.com/tq5124" target="_blank"><i class="icon-twitter"></i>&nbsp;&nbsp;Twitter</a>
+            <a href="mail: tq5124.web@gmail.com" target="_blank"><i class="icon-envelope"></i>&nbsp;&nbsp;Gmail</a>
+        </nav>
     </body>
 </html>
 
@@ -74,21 +51,12 @@
         //aync load the big image
         $('#intro').css('background-image', 'url(wallpapers/intro.jpg)');
 
-        //inactive set
-        $('header div').addClass('inactive')
-
         //Navigation function
-        //$('header').addClass('cbp-spmenu-push');
         $('#navigation').click(function () {
             $('#cbp-menu').toggleClass('cbp-spmenu-open');
-            //$('header').toggleClass('cbp-spmenu-push-toright');
-            //$('header div').toggleClass('inactive').toggleClass('disabled');
-            //$(this).removeClass('disabled').toggleClass('active');
         });
-
-        //aboutMe function
-        $('#aboutme').click(function () {
-            $('footer').toggleClass('footer_appear');
+        $('#intro').click(function(){
+            $('#cbp-menu').removeClass('cbp-spmenu-open');
         });
     });
 </script>

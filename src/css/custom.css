@@ -8,25 +8,6 @@ header{
     line-height: 50px;
     cursor: pointer;
 }
-header div.inactive:hover{
-    background-color: rgb(250,250,250);
-    transition: 200ms;
-}
-header div.inactive a:hover{
-    color: orange;
-}
-header div.active{
-    background-color: rgb(250,250,250);
-}
-header div.active a{
-    color: orange;
-}
-header div.disabled{
-    pointer-events: none;
-}
-header div.disabled a{
-    color: #ccc;
-}
 footer{
     width: 100%;
     position: fixed;
