@@ -13,7 +13,7 @@
         <link href="src/css/custom.css" rel="stylesheet">
         <link href="src/css/cbp-menu.css" rel="stylesheet">
     </head>
-    <body>
+    <body class="cbp-spmenu-push">
         <header>
             <nav class="row-fluid">
                 <div class="text-center span1 offset2" id="navigation"><a>Navigation</a></div>
@@ -27,8 +27,9 @@
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left " id="cbp-menu">
             <h3>Navigation</h3>
             <a href="../WordPress">Blog</a>
-            <a href="#">Django</a>
-            <a href="../SHBook">SHBook</a>
+	    <a href="../my-mind">my-mind</a>
+	    <a href="https://www.dropbox.com/s/w57a8cakux0rzcc/resume.pdf">Resume</a>
+	
             <h3>About Me</h3>
             <a href="#">
                 <p style="font-size: 2em;font-weight: bold;">tq5124</p>
@@ -54,9 +55,11 @@
         //Navigation function
         $('#navigation').click(function () {
             $('#cbp-menu').toggleClass('cbp-spmenu-open');
+            $('body').toggleClass('cbp-spmenu-push-toright');
         });
         $('#intro').click(function(){
             $('#cbp-menu').removeClass('cbp-spmenu-open');
+            $('body').toggleClass('cbp-spmenu-push-toright');
         });
     });
 </script>
